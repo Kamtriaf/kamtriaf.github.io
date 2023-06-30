@@ -1,2 +1,33 @@
-<h1>МАРКА ТУТ НЕТ</h1>
-<p>Идите нахуй</p>
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// СУКА У Я ЩАС ТАКОЕ ПОСЛАНИЕ ТОПОВОЕ ТУТ ПИСАЛ ТУТ СЛОВ СУКА БЫЛО НЕ МЕНЬШЕ 200 НАХУЙ И ВСЁ ПРОЁБАНО ТЕПЕРЬ НУ КОРОЧЕ ЕСЛИ ЭТОТ ФАЙЛ ВДРУГ ПОПАЛ НА РКСИТ И ВЫ ЭТО СЕЙЧАС ЧИТАЕТЕ ТО ЗНАЙТЕ Я ЕБАЛ ВАШУ МАТЬ
+var countDownDate = new Date("Jan 19, 2038 6:14:07").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "ебанат заходи в войс щас играть будем";
+  }
+}, 1000);
+</script>
